@@ -167,6 +167,7 @@ button {
 /* ----- Logo ----- */
 .logo {
   display: flex;
+  align-items: center;
 }
 
 .logo__image {
