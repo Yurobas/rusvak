@@ -100,24 +100,16 @@ input {
 }
 
 button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 260px;
-  height: 60px;
-  padding: 20px 30px;
-  color: #fff;
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
-  line-height: 1;
   border: none;
-  border-radius: 50px;
-  background-color: #e21d24;
-  cursor: pointer;
+  background-color: transparent;
 }
 
+button
+
 .wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   max-width: 100vw;
   min-height: 100vh;
   overflow: hidden;
@@ -133,6 +125,74 @@ button {
 .title {
   font-size: 60px;
   font-weight: 700;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 260px;
+  height: 60px;
+  padding: 20px 30px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 50px;
+  background-color: #e21d24;
+  line-height: 1;
+  cursor: pointer;
+}
+
+/* ----- Scroll ----- */
+.scroll {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #cfcac6;
+}
+
+.scroll:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  border-top: 2px solid #e21d24;
+  border-left: 2px solid #e21d24;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* ----- Logo ----- */
+.logo {
+  display: flex;
+}
+
+.logo__image {
+  width: 45px;
+  height: 45px;
+}
+
+.logo__text {
+  margin-left: 15px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+/* ----- Footer ----- */
+.footer {
+  padding: 28px 0;
+  background-color: #fff;
+}
+
+.footer__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /* ----- Hero section ----- */
