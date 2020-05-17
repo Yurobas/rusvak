@@ -74,6 +74,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   margin: 0;
+  line-height: 1.75;
 }
 
 p + p {
@@ -99,8 +100,20 @@ input {
 }
 
 button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 260px;
+  height: 60px;
+  padding: 20px 30px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
   border: none;
-  background: none;
+  border-radius: 50px;
+  background-color: #e21d24;
   cursor: pointer;
 }
 
@@ -160,5 +173,9 @@ button {
 
 .hero__description {
   max-width: 500px;
+}
+
+.hero__button {
+  margin-top: 80px;
 }
 
