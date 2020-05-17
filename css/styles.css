@@ -102,6 +102,7 @@ input {
 button {
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .wrapper {
@@ -139,7 +140,6 @@ button {
   border-radius: 50px;
   background-color: #e21d24;
   line-height: 1;
-  cursor: pointer;
 }
 
 /* ----- Scroll ----- */
@@ -162,7 +162,7 @@ button {
   height: 14px;
   border-top: 2px solid #e21d24;
   border-left: 2px solid #e21d24;
-  transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -25%) rotate(45deg);
 }
 
 /* ----- Logo ----- */
