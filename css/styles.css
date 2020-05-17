@@ -137,9 +137,15 @@ button {
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: 0.5px;
   border-radius: 50px;
   background-color: #e21d24;
+  transition: filter 0.25s ease-in;
   line-height: 1;
+}
+
+.button:hover {
+  filter: brightness(0.9);
 }
 
 /* ----- Scroll ----- */
