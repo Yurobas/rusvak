@@ -36,6 +36,7 @@ html {
 body {
   position: relative;
   margin: 0;
+  color: #021734;
   font-family: 'Montserrat', Helvetica, Arial, sans-serif;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   -webkit-focus-ring-color: rgba(255, 255, 255, 0);
@@ -76,7 +77,7 @@ p {
 }
 
 p + p {
-  margin-top: 0.8rem;
+  margin-top: 2rem;
 }
 
 a {
@@ -110,8 +111,15 @@ button {
   padding: 0 15px;
 }
 
+.title {
+  font-size: 60px;
+  font-weight: 700;
+}
+
+/* ----- Hero section ----- */
 .hero {
   position: relative;
+  color: #fff;
 }
 
 .hero__bg {
@@ -129,7 +137,7 @@ button {
 }
 
 .hero__bg-block--gradient {
-  background-image: linear-gradient( 0deg, rgb(2,23,52) 0%, rgb(1,60,130) 100%);
+  background-image: linear-gradient(90deg, #021734, #013c82);
 }
 
 .hero__bg-block--image {
@@ -139,5 +147,18 @@ button {
 .hero__container {
   position: relative;
   z-index: 2;
+}
+
+.hero__content {
+  width: 50%;
+  padding: 180px 0 200px;
+}
+
+.hero__title {
+  margin-bottom: 50px;
+}
+
+.hero__description {
+  max-width: 500px;
 }
 
