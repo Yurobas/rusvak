@@ -140,7 +140,7 @@ button {
   letter-spacing: 0.5px;
   border-radius: 50px;
   background-color: #e21d24;
-  transition: filter 0.25s ease-in;
+  transition: filter 0.2s ease-in;
   line-height: 1;
 }
 
@@ -156,6 +156,11 @@ button {
   padding: 0;
   border-radius: 50%;
   border: 1px solid #cfcac6;
+  transition: border-color 0.2s ease-in;
+}
+
+.scroll:hover {
+  border-color: #e21d24;
 }
 
 .scroll:before {
