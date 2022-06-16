@@ -1,0 +1,19 @@
+{
+  "name": "rusvak",
+  "scripts": {
+    "dev": "parcel src/index.pug",
+    "build": "parcel build src/index.pug --no-optimize --public-url ./"
+  },
+  "devDependencies": {
+    "@parcel/packager-raw-url": "^2.6.0",
+    "@parcel/packager-xml": "^2.6.0",
+    "@parcel/transformer-pug": "^2.4.0",
+    "@parcel/transformer-sass": "^2.4.0",
+    "@parcel/transformer-webmanifest": "^2.6.0",
+    "@parcel/transformer-xml": "^2.6.0",
+    "parcel": "^2.4.0"
+  },
+  "dependencies": {
+    "swiper": "^8.1.4"
+  }
+}
