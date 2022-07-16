@@ -1,0 +1,10 @@
+.products {
+  &__arrows {
+    display: flex;
+  }
+  &__arrow {
+    &:not(:last-of-type) {
+      margin-right: 30px;
+    }
+  }
+}

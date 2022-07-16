@@ -1,17 +1,25 @@
 :root {
+  // Цвета
   --white: #fff;
   --black: #000;
   --red: #e21d24;
   --transparent: rgba(255, 255, 255, 0);
-
+  // Текст
   --text-black: #021734;
   --text-gray: #bfb9b5;
-
+  // Границы
+  --border-red: #e84d52;
   --border-gray: #e1e2e5;
-
+  --border-gray-dark: #cfcac6;
+  // Фон
+  --bg-gray: #f1f0ee;
+  --bg-dark: #021f45;
+  // Анимации
   --transition: .55s;
-
+  // Тени
+  --shadow-card: 0 5px 30px 0 rgb(63, 126, 202, 0.35);
+  // Градиенты
   --gradient-blue: rgb(2,23,52) 0%, rgb(1,60,130) 100%;
-
+  // Отступы
   --section-offset: 90px;
 }

@@ -1,0 +1,68 @@
+.contacts {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: var(--bg-dark);
+  &__map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../images/map.jpg') 50% 50%/cover no-repeat;
+  }
+  &__container {
+    width: 100%;
+  }
+  &__card {
+    position: relative;
+    width: 50%;
+    margin-left: auto;
+    padding: 140px 70px;
+    background-color: var(--white);
+    overflow: hidden;
+  }
+  &__logo {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 78%;
+    transform: translate(50%, -50%);
+    fill: var(--bg-gray);
+    z-index: 1;
+  }
+  &__title {
+    position: relative;
+    margin-bottom: 50px;
+    transform: translateX(-15px);
+    z-index: 2;
+  }
+  &__info {
+    position: relative;
+    z-index: 2;
+  }
+  &__row {
+    display: flex;
+    align-items: center;
+    & + & {
+      margin-top: 8px;
+    }
+  }
+  &__link {
+    &:hover {
+      color: var(--red);
+    }
+  }
+  &__name {
+    width: 27%;
+  }
+  &__value {
+    width: 73%;
+    &.text {
+      margin-top: 0;
+    }
+  }
+  &__button {
+    margin-top: 40px;
+  }
+}

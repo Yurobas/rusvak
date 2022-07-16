@@ -1,0 +1,11 @@
+mixin review(likes)
+  .review
+    .review__picture
+      img.review__image(src="./images/review-image.jpg", alt="Фото")
+    .review__info 
+      .review__icon 
+        img.review__avatar(src="./images/review-author.jpg", alt="Аватарка")
+      .review__author 
+        .review__author-name.text.text--mini @valeriyaarzamastseva
+        .review__author-likes
+          +likes(likes)

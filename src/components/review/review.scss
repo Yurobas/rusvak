@@ -1,0 +1,39 @@
+.review {
+  cursor: pointer;
+  &:hover {
+    & .review__picture {
+      box-shadow: var(--shadow-card);
+    }
+    & .review__image {
+      transform: scale3d(1.03, 1.03, 1.03);
+    }
+  }
+  &__picture {
+    width: 100%;
+    height: 260px;
+    margin-bottom: 18px;
+    transition: var(--transition);
+    overflow: hidden;
+  }
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+  }
+  &__info {
+    display: flex;
+  }
+  &__icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 18px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  &__avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

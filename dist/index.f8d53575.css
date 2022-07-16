@@ -5,8 +5,13 @@
   --transparent: #fff0;
   --text-black: #021734;
   --text-gray: #bfb9b5;
+  --border-red: #e84d52;
   --border-gray: #e1e2e5;
+  --border-gray-dark: #cfcac6;
+  --bg-gray: #f1f0ee;
+  --bg-dark: #021f45;
   --transition: .55s;
+  --shadow-card: 0 5px 30px 0 #3f7eca59;
   --gradient-blue: #021734 0%, #013c82 100%;
   --section-offset: 90px;
 }
@@ -66,6 +71,11 @@ img, video, iframe {
   max-width: 100%;
 }
 
+svg, img {
+  max-width: 100%;
+  display: block;
+}
+
 img {
   vertical-align: top;
   border: 0;
@@ -78,10 +88,6 @@ h1, h2, h3, h4, h5, h6, p {
 a {
   color: inherit;
   text-decoration: none;
-}
-
-svg {
-  display: block;
 }
 
 input, textarea {
@@ -111,10 +117,6 @@ button {
   display: flex;
 }
 
-.main {
-  padding-top: 98px;
-}
-
 .container {
   max-width: 1280px;
   margin: 0 auto;
@@ -123,14 +125,17 @@ button {
 
 .section {
   padding: var(--section-offset) 0;
-}
-
-.section.--fullscreen {
   min-height: 100vh;
 }
 
-.section.--fullscreen .section__container {
+.section__container {
   min-height: inherit;
+  align-items: center;
+  display: flex;
+}
+
+.section__head {
+  justify-content: space-between;
   align-items: center;
   display: flex;
 }
@@ -151,6 +156,18 @@ button {
 
 .text + .text {
   margin-top: 30px;
+}
+
+.text--big {
+  font-size: 20px;
+}
+
+.text--mini {
+  font-size: 14px;
+}
+
+.bold {
+  font-weight: 700;
 }
 
 .link {
@@ -187,38 +204,26 @@ button {
   transform: translate3d(0, 8px, 1px);
 }
 
+.nav {
+  position: relative;
+}
+
+.nav__bar {
+  width: 0;
+  height: 6px;
+  background-color: var(--red);
+  transition: var(--transition);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .nav__list {
   display: flex;
 }
 
 .nav__item {
   margin: 0 25px;
-  position: relative;
-}
-
-.nav__item.--active {
-  pointer-events: none;
-}
-
-.nav__item.--active:after {
-  background-color: var(--red);
-}
-
-.nav__item.--active .nav__link {
-  color: var(--text-gray);
-}
-
-.nav__item:after {
-  content: "";
-  width: 100%;
-  height: 6px;
-  background-color: var(--transparent);
-  transition: var(--transition);
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
 }
 
 .nav__link {
@@ -232,6 +237,11 @@ button {
 
 .nav__link:hover {
   color: var(--red);
+}
+
+.nav__link.--active {
+  pointer-events: none;
+  color: var(--text-gray);
 }
 
 .logo {
@@ -255,13 +265,104 @@ button {
   font-weight: 600;
 }
 
+.likes {
+  align-items: center;
+  display: flex;
+}
+
+.likes__icon {
+  width: 14px;
+  fill: var(--red);
+  margin-right: 5px;
+}
+
+.review {
+  cursor: pointer;
+}
+
+.review:hover .review__picture {
+  box-shadow: var(--shadow-card);
+}
+
+.review:hover .review__image {
+  transform: scale3d(1.03, 1.03, 1.03);
+}
+
+.review__picture {
+  width: 100%;
+  height: 260px;
+  transition: var(--transition);
+  margin-bottom: 18px;
+  overflow: hidden;
+}
+
+.review__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.review__info {
+  display: flex;
+}
+
+.review__icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 18px;
+  overflow: hidden;
+}
+
+.review__avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider-arrow-prev, .slider-arrow-next {
+  width: 60px;
+  height: 60px;
+  border: 1px solid var(--border-gray-dark);
+  background-color: var(--white);
+  transition: var(--transition);
+  cursor: pointer;
+  border-radius: 50%;
+  position: relative;
+}
+
+.slider-arrow-prev:hover, .slider-arrow-next:hover {
+  border-color: var(--border-red);
+}
+
+.slider-arrow-next .slider-arrow-icon {
+  transform: translate(-50%, -50%)rotate(180deg);
+}
+
+.slider-arrow-icon {
+  height: 18px;
+  fill: var(--black);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .header {
   width: 100%;
   background-color: var(--white);
+  box-shadow: var(--shadow-card);
+  transition: var(--transition);
   z-index: 100;
   position: fixed;
   top: 0;
   left: 0;
+}
+
+.header.--hide {
+  box-shadow: unset;
+  transform: translate3d(0, -100%, 0);
 }
 
 .header__row {
@@ -280,7 +381,6 @@ button {
 }
 
 .about {
-  min-height: calc(100vh - 98px - var(--section-offset) * 2);
   position: relative;
 }
 
@@ -318,6 +418,14 @@ button {
 
 .about__button {
   margin-top: 95px;
+}
+
+.products__arrows {
+  display: flex;
+}
+
+.products__arrow:not(:last-of-type) {
+  margin-right: 30px;
 }
 
 .benefits {
@@ -390,6 +498,95 @@ button {
   margin-top: 5px;
 }
 
+.reviews__list {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: -55px;
+  display: flex;
+}
+
+.reviews__item {
+  width: calc(25% - 22.5px);
+  margin-top: 55px;
+}
+
+.contacts {
+  background-color: var(--bg-dark);
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.contacts__map {
+  background: url("map.c827ca00.jpg") 50% / cover no-repeat;
+  position: absolute;
+  inset: 0;
+}
+
+.contacts__container {
+  width: 100%;
+}
+
+.contacts__card {
+  width: 50%;
+  background-color: var(--white);
+  margin-left: auto;
+  padding: 140px 70px;
+  position: relative;
+  overflow: hidden;
+}
+
+.contacts__logo {
+  width: 78%;
+  fill: var(--bg-gray);
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(50%, -50%);
+}
+
+.contacts__title {
+  z-index: 2;
+  margin-bottom: 50px;
+  position: relative;
+  transform: translateX(-15px);
+}
+
+.contacts__info {
+  z-index: 2;
+  position: relative;
+}
+
+.contacts__row {
+  align-items: center;
+  display: flex;
+}
+
+.contacts__row + .contacts__row {
+  margin-top: 8px;
+}
+
+.contacts__link:hover {
+  color: var(--red);
+}
+
+.contacts__name {
+  width: 27%;
+}
+
+.contacts__value {
+  width: 73%;
+}
+
+.contacts__value.text {
+  margin-top: 0;
+}
+
+.contacts__button {
+  margin-top: 40px;
+}
+
 .footer {
   padding: 25px 0;
 }
@@ -403,24 +600,24 @@ button {
 .footer__button {
   width: 50px;
   height: 50px;
+  border: 1px solid var(--border-gray-dark);
   transition: var(--transition);
   cursor: pointer;
-  border: 1px solid #cfcac6;
   border-radius: 50%;
   position: relative;
 }
 
 .footer__button:hover {
-  border-color: #e84d52;
+  border-color: var(--border-red);
 }
 
 .footer__icon {
   height: 18px;
-  fill: #e84d52;
+  fill: var(--border-red);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%)rotate(90deg);
 }
 
-/*# sourceMappingURL=index.53c784e7.css.map */
+/*# sourceMappingURL=index.f8d53575.css.map */

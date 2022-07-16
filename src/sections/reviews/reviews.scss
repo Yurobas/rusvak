@@ -1,0 +1,12 @@
+.reviews {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: -55px;
+  }
+  &__item {
+    width: calc(100% / 4 - (30px * 3) / 4);
+    margin-top: 55px;
+  }
+}

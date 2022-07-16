@@ -4,7 +4,13 @@
   left: 0;
   width: 100%;
   background-color: var(--white);
+  box-shadow: var(--shadow-card);
+  transition: var(--transition);
   z-index: 100;
+  &.--hide {
+    transform: translate3d(0, -100%, 0);
+    box-shadow: unset;
+  }
   &__row {
     display: flex;
     align-items: center;
