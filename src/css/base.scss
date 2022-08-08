@@ -98,27 +98,12 @@ button {
   padding: 0 15px;
 }
 
-.section {
-  padding: var(--section-offset) 0;
-  min-height: 100vh;
-  &__container {
-    display: flex;
-    align-items: center;
-    min-height: inherit;
-  }
-  &__head {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  &__title {
-    margin-bottom: 50px;
-  }
-}
-
 .title {
   font-size: 60px;
   font-weight: 700;
+  &--block {
+    font-size: 28px;
+  }
 }
 
 .text {
@@ -132,6 +117,31 @@ button {
   }
   &--mini {
     font-size: 14px;
+  }
+}
+
+.section {
+  padding: var(--section-offset) 0;
+  min-height: 100vh;
+  overflow: hidden;
+  &--autoheight {
+    min-height: unset;
+  }
+  &--big {
+    padding: 100px 0 120px;
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+    min-height: inherit;
+  }
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__title {
+    margin-bottom: 50px;
   }
 }
 
@@ -167,5 +177,24 @@ button {
   }
   &:active {
     transform: translate3d(0, 8px, 1px);
+  }
+}
+
+.table {
+  &__row {
+    display: flex;
+    & + & {
+      margin-top: 4px;
+    }
+  }
+  &__item {
+    color: var(--text-blue);
+    &:first-of-type {
+      width: 55%;
+    }
+    &:last-of-type {
+      width: 45%;
+      padding-left: 10px;
+    }
   }
 }

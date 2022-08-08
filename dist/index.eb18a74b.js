@@ -1,5 +1,61 @@
 document.addEventListener("DOMContentLoaded", ()=>{
+    (function map() {
+        ymaps.ready(init);
+        function init() {
+            // Создание карты.
+            const map = new ymaps.Map("map", {
+                center: [
+                    55.643449,
+                    37.714375
+                ],
+                zoom: 16
+            });
+        }
+    })();
+    (function slidersProduct() {
+        const activeClass = "--active";
+        const previews = [
+            ...document.querySelectorAll(".products__previews .swiper-slide"), 
+        ];
+        const previewSlider = new Swiper(".products__previews .swiper", {
+            speed: 700,
+            spaceBetween: 30,
+            slidesPerView: "auto",
+            watchSlidesProgress: true,
+            watchSlidesVisibility: true
+        });
+        const mainSlider = new Swiper(".products__slider .swiper", {
+            speed: 700,
+            spaceBetween: 30
+        });
+        addActive(0);
+        mainSlider.on("slideChange", ()=>{
+            let index = mainSlider.activeIndex;
+            if (!index && index !== 0) return;
+            removeActive();
+            addActive(index);
+            previewSlider.slideTo(index);
+        });
+        previewSlider.on("click", ()=>{
+            let index = previewSlider.clickedIndex;
+            if (!index && index !== 0) return;
+            removeActive();
+            addActive(index);
+            mainSlider.slideTo(index);
+        });
+        function addActive(index) {
+            previews.forEach((preview, i)=>{
+                if (index === i) preview.classList.add(activeClass);
+            });
+        }
+        function removeActive() {
+            previews.forEach((preview)=>{
+                preview.classList.remove(activeClass);
+            });
+        }
+    })();
     (function anchorScroll() {
+        let header = document.querySelector(".header").getBoundingClientRect().height;
         let anchors = [
             ...document.querySelectorAll('[href*="#"]')
         ];
@@ -7,7 +63,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
             anchor.addEventListener("click", (e)=>{
                 const el = document.querySelector(e.currentTarget.getAttribute("href"));
                 const top = el.getBoundingClientRect().top;
-                let pageTo = window.scrollY + top;
+                let pageTo = window.scrollY + top - header;
                 const time = Date.now();
                 requestAnimationFrame(scroll);
                 function scroll() {
@@ -36,7 +92,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
         sections.forEach((section)=>{
             const observer = new IntersectionObserver((entries)=>{
                 entries.forEach((entry)=>{
-                    console.log(entry);
                     if (entry.isIntersecting) links.forEach((link)=>{
                         const id = link.href.split("#")[1];
                         if (id === entry.target.id) {
@@ -49,7 +104,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
             }, {
                 root: null,
                 rootMargin: "0px",
-                threshold: .5
+                threshold: 0.5
             });
             observer.observe(section);
         });
@@ -81,4 +136,4 @@ document.addEventListener("DOMContentLoaded", ()=>{
     })();
 });
 
-//# sourceMappingURL=index.14260d98.js.map
+//# sourceMappingURL=index.eb18a74b.js.map

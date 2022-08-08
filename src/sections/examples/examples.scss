@@ -1,0 +1,31 @@
+.examples {
+  padding-top: 100px;
+  border-top: 1px solid var(--border-gray);
+  &__container {
+    display: flex;
+  }
+  &__block {
+    width: 50%;
+  }
+  &__info {
+    padding-right: 40px;
+  }
+  &__title {
+    margin-bottom: 25px;
+  }
+  &__text {
+    & + & {
+      margin-top: 20px;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: -30px;
+  }
+  &__item {
+    width: calc(50% - 15px);
+    margin-top: 30px;
+  }
+}

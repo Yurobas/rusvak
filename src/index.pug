@@ -20,6 +20,8 @@ html(lang="ru-RU")
     title РусВак | Вакуумное упаковочное оборудование
     meta(name="description" value="РусВак - российский производитель вакуумного упаковочноего оборудования. Мы создаём надёжное оборудование, отвечающее всем требованиям современного производства.")
 
+    script(src="https://api-maps.yandex.ru/2.1/?apikey=643991cb-825c-4c0a-867a-b7677918aeb9&lang=ru_RU" type="text/javascript")
+
     include ./components/mixins
   body
     .wrapper
@@ -27,9 +29,11 @@ html(lang="ru-RU")
       main.main
         include ./sections/about/about
         include ./sections/products/products
+        include ./sections/examples/examples
         include ./sections/benefits/benefits
         include ./sections/reviews/reviews
         include ./sections/contacts/contacts
       include ./sections/footer/footer
 
+    script(src="./js/swiper.js")
     script(src="./index.js")
