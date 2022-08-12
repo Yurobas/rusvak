@@ -1,65 +1,105 @@
+const mapOfficeIcon = new URL(
+  'images/point.svg',
+  import.meta.url
+);
+
 document.addEventListener("DOMContentLoaded", () => {
   +(function map() {
-    ymaps.ready(init);
-    function init() {
+    ymaps.ready(() => {
       // Создание карты.
       const map = new ymaps.Map("map", {
-        center: [55.643449, 37.714375],
+        center: [55.642979, 37.720501],
         zoom: 16,
       });
-    }
+
+      officePoint = new ymaps.Placemark([55.643449, 37.714419], {
+
+      }, {
+          preset: 'islands#icon',
+          iconColor: '#e21d24',
+          // Опции.
+          // Необходимо указать данный тип макета.
+          // iconLayout: 'default#image',
+          // // Своё изображение иконки метки.
+          // iconImageHref: mapOfficeIcon.href,
+          // // Размеры метки.
+          // iconImageSize: [50, 50],
+          // // Смещение левого верхнего угла иконки относительно
+          // // её "ножки" (точки привязки).
+          // iconImageOffset: [-25, -25]
+      })
+
+      map.geoObjects
+        .add(officePoint)
+    });
+  })();
+
+  +(function sliderProducts() {
+    const slider = new Swiper('.products__content-slider.swiper', {
+      speed: 700,
+      simulateTouch: false,
+      navigation: {
+        nextEl: '.slider-arrow-next',
+        prevEl: '.slider-arrow-prev',
+      },
+    })
   })();
 
   +(function slidersProduct() {
     const activeClass = "--active";
-    const previews = [
-      ...document.querySelectorAll(".products__previews .swiper-slide"),
-    ];
+    const items = [...document.querySelectorAll('.products__slide')];
+    items.forEach(item => {
+      const previews = [
+        ...item.querySelectorAll(".products__previews .swiper-slide"),
+      ];
+      const previewSliderEl = item.querySelector('.products__previews .swiper');
+      const mainSliderEl = item.querySelector('.products__slider .swiper');
 
-    const previewSlider = new Swiper(".products__previews .swiper", {
-      speed: 700,
-      spaceBetween: 30,
-      slidesPerView: "auto",
-      watchSlidesProgress: true,
-      watchSlidesVisibility: true,
-    });
-
-    const mainSlider = new Swiper(".products__slider .swiper", {
-      speed: 700,
-      spaceBetween: 30,
-    });
-
-    addActive(0);
-
-    mainSlider.on("slideChange", () => {
-      let index = mainSlider.activeIndex;
-      if (!index && index !== 0) return;
-      removeActive();
-      addActive(index);
-      previewSlider.slideTo(index);
-    });
-
-    previewSlider.on("click", () => {
-      let index = previewSlider.clickedIndex;
-      if (!index && index !== 0) return;
-      removeActive();
-      addActive(index);
-      mainSlider.slideTo(index);
-    });
-
-    function addActive(index) {
-      previews.forEach((preview, i) => {
-        if (index === i) {
-          preview.classList.add(activeClass);
-        }
+      const previewSlider = new Swiper(previewSliderEl, {
+        speed: 700,
+        spaceBetween: 30,
+        slidesPerView: "auto",
+        watchSlidesProgress: true,
+        watchSlidesVisibility: true,
       });
-    }
 
-    function removeActive() {
-      previews.forEach((preview) => {
-        preview.classList.remove(activeClass);
+      const mainSlider = new Swiper(mainSliderEl, {
+        speed: 700,
+        spaceBetween: 30,
       });
-    }
+  
+      addActive(0);
+  
+      mainSlider.on("slideChange", () => {
+        let index = mainSlider.activeIndex;
+        if (!index && index !== 0) return;
+        removeActive();
+        addActive(index);
+        previewSlider.slideTo(index);
+      });
+  
+      previewSlider.on("click", () => {
+        let index = previewSlider.clickedIndex;
+        if (!index && index !== 0) return;
+        removeActive();
+        addActive(index);
+        mainSlider.slideTo(index);
+      });
+  
+      function addActive(index) {
+        previews.forEach((preview, i) => {
+          if (index === i) {
+            preview.classList.add(activeClass);
+          }
+        });
+      }
+  
+      function removeActive() {
+        previews.forEach((preview) => {
+          preview.classList.remove(activeClass);
+        });
+      }
+    })
   })();
 
   +(function anchorScroll() {
