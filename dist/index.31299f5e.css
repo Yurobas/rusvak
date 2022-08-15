@@ -23,19 +23,19 @@
 
 @font-face {
   font-family: Montserrat;
-  src: url("Montserrat-Regular.19870125.ttf") format("truetype");
+  src: url("Montserrat-Regular.96758019.ttf") format("truetype");
   font-weight: 400;
 }
 
 @font-face {
   font-family: Montserrat;
-  src: url("Montserrat-SemiBold.645bd69d.ttf") format("truetype");
+  src: url("Montserrat-SemiBold.eefb3b53.ttf") format("truetype");
   font-weight: 600;
 }
 
 @font-face {
   font-family: Montserrat;
-  src: url("Montserrat-Bold.90939356.ttf") format("truetype");
+  src: url("Montserrat-Bold.b170a58f.ttf") format("truetype");
   font-weight: 700;
 }
 
@@ -737,7 +737,7 @@ button {
 }
 
 .about:before {
-  background: url("about-bg.12481315.webp") 50% 50% / cover no-repeat var(--text-gray);
+  background: url("about-bg.ed2ded1a.webp") 50% 50% / cover no-repeat var(--text-gray);
   right: 0;
 }
 
@@ -1009,7 +1009,7 @@ button {
 
 z .contacts__map-preload {
   z-index: 1;
-  background: url("map.454cf976.jpg") 50% / cover no-repeat;
+  background: url("map.c827ca00.jpg") 50% / cover no-repeat;
   position: absolute;
   inset: 0;
 }
@@ -1120,4 +1120,4 @@ z .contacts__map-preload {
   transform: translate(-50%, -50%)rotate(90deg);
 }
 
-/*# sourceMappingURL=index.a097447b.css.map */
+/*# sourceMappingURL=index.31299f5e.css.map */
