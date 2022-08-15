@@ -43,6 +43,7 @@
     padding: 140px 70px;
     background-color: var(--white);
     overflow: hidden;
+    box-shadow: var(--shadow-card);
     z-index: 2;
   }
   &__logo {

@@ -32,12 +32,28 @@
       margin-right: 30px;
     }
   }
+  &__content {
+    &-slide {
+      opacity: 0 !important;
+      transition: var(--transition);
+      &.--active {
+        opacity: 1 !important;
+        & .products__slide-block {
+          &:first-of-type {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
   &__slide {
     display: flex;
     &-block {
       width: 50%;
       &:first-of-type {
         padding-right: 80px;
+        opacity: 0;
+        transition: var(--transition) .45s;
       }
       &:last-of-type {
         padding-left: 80px;

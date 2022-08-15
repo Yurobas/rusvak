@@ -532,6 +532,26 @@ document.addEventListener("DOMContentLoaded", ()=>{
             navigation: {
                 nextEl: ".slider-arrow-next",
                 prevEl: ".slider-arrow-prev"
+            },
+            slideActiveClass: "--active",
+            effect: "creative",
+            creativeEffect: {
+                prev: {
+                    // will set `translateZ(-400px)` on previous slides
+                    translate: [
+                        0,
+                        0,
+                        -400
+                    ]
+                },
+                next: {
+                    // will set `translateX(100%)` on next slides
+                    translate: [
+                        "100%",
+                        0,
+                        0
+                    ]
+                }
             }
         });
     })();
@@ -609,13 +629,27 @@ document.addEventListener("DOMContentLoaded", ()=>{
             });
         });
     })();
-    (function nav() {
+    (function burger() {
+        const wrapper = document.querySelector(".wrapper");
+        const burger = document.querySelector(".header__burger");
+        burger.addEventListener("click", ()=>{
+            if (!burger.classList.contains("--active")) {
+                burger.classList.add("--active");
+                wrapper.classList.add("--tint");
+            } else {
+                burger.classList.remove("--active");
+                wrapper.classList.remove("--tint");
+            }
+        });
+    })();
+    (function navHeader() {
         const activeClass = "--active";
-        const list = document.querySelector(".nav__list");
+        const block = document.querySelector(".header__nav");
+        const list = block.querySelector(".nav__list");
         const links = [
-            ...document.querySelectorAll(".nav__link")
+            ...block.querySelectorAll(".nav__link")
         ];
-        const bar = document.querySelector(".nav__bar");
+        const bar = block.querySelector(".nav__bar");
         const sections = [
             ...document.querySelectorAll(".section")
         ];
