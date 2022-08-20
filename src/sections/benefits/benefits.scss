@@ -20,9 +20,11 @@
       flex-direction: column;
     }
     & + & {
-      margin-top: 30px;
-      padding-top: 30px;
       border-top: 1px solid var(--border-gray);
+      @media (max-width: 1279px) {
+        margin-top: 30px;
+        padding-top: 30px;
+      }
     }
     &:first-child {
       & .benefits__item {

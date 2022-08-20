@@ -1117,8 +1117,13 @@ button {
 
 .benefits__list + .benefits__list {
   border-top: 1px solid var(--border-gray);
-  margin-top: 30px;
-  padding-top: 30px;
+}
+
+@media (max-width: 1279px) {
+  .benefits__list + .benefits__list {
+    margin-top: 30px;
+    padding-top: 30px;
+  }
 }
 
 .benefits__list:first-child .benefits__item {
@@ -1400,4 +1405,4 @@ button {
   transform: translate(-50%, -50%)rotate(90deg);
 }
 
-/*# sourceMappingURL=index.6c79b290.css.map */
+/*# sourceMappingURL=index.b7374ad2.css.map */

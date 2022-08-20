@@ -61,16 +61,16 @@ $7d39d93f9098a310$export$f7ad0328861e2f03 = $7d39d93f9098a310$var$resolve;
 
 });
 
-var $16850d2959882b89$exports = {};
+var $287c4fed59a5d895$exports = {};
 
-(parcelRequire("aKzDW")).register(JSON.parse('{"h8h7G":"index.e6c02b84.js","8LBSM":"point.5a315395.svg"}'));
+(parcelRequire("aKzDW")).register(JSON.parse('{"h8h7G":"index.b7b22e97.js","sQ3Bm":"logo.129205bf.svg"}'));
 
-var $7cffefe36f1103ac$exports = {};
+var $abc8f587cb634ce5$exports = {};
 
-$7cffefe36f1103ac$exports = new URL((parcelRequire("aKzDW")).resolve("8LBSM"), import.meta.url).toString();
+$abc8f587cb634ce5$exports = new URL((parcelRequire("aKzDW")).resolve("sQ3Bm"), import.meta.url).toString();
 
 
-const $3da87ddc4a220fcd$var$mapOfficeIcon = new URL($7cffefe36f1103ac$exports);
+const $3da87ddc4a220fcd$var$mapIcon = new URL($abc8f587cb634ce5$exports);
 document.addEventListener("DOMContentLoaded", ()=>{
     (function map1() {
         ymaps.ready(()=>{
@@ -83,8 +83,8 @@ document.addEventListener("DOMContentLoaded", ()=>{
                 zoom: 8
             });
             const officePoint = new ymaps.Placemark([
-                55.643449,
-                37.714419
+                55.577622,
+                37.624193
             ], {
                 balloonContent: `
           <b>Офис:</b>
@@ -92,12 +92,8 @@ document.addEventListener("DOMContentLoaded", ()=>{
           г. Москва, Востряковский Проезд, 10Бс7
         `
             }, {
-                iconLayout: "default#image",
-                iconImageHref: $3da87ddc4a220fcd$var$mapOfficeIcon,
-                iconImageSize: [
-                    50,
-                    50
-                ]
+                preset: "islands#dotIcon",
+                iconColor: "#e21d24"
             });
             const storagePoint = new ymaps.Placemark([
                 54.155066,
@@ -109,12 +105,8 @@ document.addEventListener("DOMContentLoaded", ()=>{
           г. Тула, улица Рязанская, дом 20
         `
             }, {
-                iconLayout: "default#image",
-                iconImageHref: $3da87ddc4a220fcd$var$mapOfficeIcon,
-                iconImageSize: [
-                    50,
-                    50
-                ]
+                preset: "islands#dotIcon",
+                iconColor: "#e21d24"
             });
             map.geoObjects.add(officePoint).add(storagePoint);
         });
@@ -294,4 +286,4 @@ document.addEventListener("DOMContentLoaded", ()=>{
 });
 
 
-//# sourceMappingURL=index.e6c02b84.js.map
+//# sourceMappingURL=index.b7b22e97.js.map

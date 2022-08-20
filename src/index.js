@@ -1,5 +1,5 @@
-const mapOfficeIcon = new URL(
-  'images/point.svg',
+const mapIcon = new URL(
+  'images/logo.svg',
   import.meta.url
 );
 
@@ -12,16 +12,18 @@ document.addEventListener("DOMContentLoaded", () => {
         zoom: 8,
       });
 
-      const officePoint = new ymaps.Placemark([55.643449, 37.714419], {
+      const officePoint = new ymaps.Placemark([55.577622, 37.624193], {
         balloonContent: `
           <b>Офис:</b>
           <br>
           г. Москва, Востряковский Проезд, 10Бс7
         `,
       }, {
-          iconLayout: 'default#image',
-          iconImageHref: mapOfficeIcon,
-          iconImageSize: [50, 50]
+        preset: 'islands#dotIcon',
+        iconColor: '#e21d24'
+        // iconLayout: 'default#image',
+        // iconImageHref: mapIcon.href,
+        // iconImageSize: [40, 40]
       })
 
       const storagePoint = new ymaps.Placemark([54.155066, 37.595222], {
@@ -31,9 +33,11 @@ document.addEventListener("DOMContentLoaded", () => {
           г. Тула, улица Рязанская, дом 20
         `,
       }, {
-          iconLayout: 'default#image',
-          iconImageHref: mapOfficeIcon,
-          iconImageSize: [50, 50]
+        preset: 'islands#dotIcon',
+        iconColor: '#e21d24'
+        // iconLayout: 'default#image',
+        // iconImageHref: mapIcon.href,
+        // iconImageSize: [40, 40]
       })
 
       map.geoObjects
