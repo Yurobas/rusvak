@@ -12,26 +12,26 @@ document.addEventListener("DOMContentLoaded", () => {
         zoom: 8,
       });
 
-      officePoint = new ymaps.Placemark([55.643449, 37.714419], {
+      const officePoint = new ymaps.Placemark([55.643449, 37.714419], {
         balloonContent: `
           <b>Офис:</b>
           <br>
           г. Москва, Востряковский Проезд, 10Бс7
         `,
       }, {
-          preset: 'islands#icon',
-          iconColor: '#e21d24',
+          iconImageHref: mapOfficeIcon,
+          iconImageSize: [50, 50]
       })
 
-      storagePoint = new ymaps.Placemark([54.155066, 37.595222], {
+      const storagePoint = new ymaps.Placemark([54.155066, 37.595222], {
         balloonContent: `
           <b>Производство:</b>
           <br>
           г. Тула, улица Рязанская, дом 20
         `,
       }, {
-          preset: 'islands#icon',
-          iconColor: '#013c82',
+          iconImageHref: mapOfficeIcon,
+          iconImageSize: [50, 50]
       })
 
       map.geoObjects

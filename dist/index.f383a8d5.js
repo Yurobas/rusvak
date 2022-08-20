@@ -63,7 +63,7 @@ $7d39d93f9098a310$export$f7ad0328861e2f03 = $7d39d93f9098a310$var$resolve;
 
 var $16850d2959882b89$exports = {};
 
-(parcelRequire("aKzDW")).register(JSON.parse('{"h8h7G":"index.f61010b3.js","8LBSM":"point.5a315395.svg"}'));
+(parcelRequire("aKzDW")).register(JSON.parse('{"h8h7G":"index.f383a8d5.js","8LBSM":"point.5a315395.svg"}'));
 
 var $7cffefe36f1103ac$exports = {};
 
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
                 ],
                 zoom: 8
             });
-            officePoint = new ymaps.Placemark([
+            const officePoint = new ymaps.Placemark([
                 55.643449,
                 37.714419
             ], {
@@ -92,10 +92,13 @@ document.addEventListener("DOMContentLoaded", ()=>{
           г. Москва, Востряковский Проезд, 10Бс7
         `
             }, {
-                preset: "islands#icon",
-                iconColor: "#e21d24"
+                iconImageHref: $3da87ddc4a220fcd$var$mapOfficeIcon,
+                iconImageSize: [
+                    50,
+                    50
+                ]
             });
-            storagePoint = new ymaps.Placemark([
+            const storagePoint = new ymaps.Placemark([
                 54.155066,
                 37.595222
             ], {
@@ -105,8 +108,11 @@ document.addEventListener("DOMContentLoaded", ()=>{
           г. Тула, улица Рязанская, дом 20
         `
             }, {
-                preset: "islands#icon",
-                iconColor: "#013c82"
+                iconImageHref: $3da87ddc4a220fcd$var$mapOfficeIcon,
+                iconImageSize: [
+                    50,
+                    50
+                ]
             });
             map.geoObjects.add(officePoint).add(storagePoint);
         });
@@ -286,4 +292,4 @@ document.addEventListener("DOMContentLoaded", ()=>{
 });
 
 
-//# sourceMappingURL=index.f61010b3.js.map
+//# sourceMappingURL=index.f383a8d5.js.map
