@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
           г. Москва, Востряковский Проезд, 10Бс7
         `,
       }, {
+          iconLayout: 'default#image',
           iconImageHref: mapOfficeIcon,
           iconImageSize: [50, 50]
       })
@@ -30,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
           г. Тула, улица Рязанская, дом 20
         `,
       }, {
+          iconLayout: 'default#image',
           iconImageHref: mapOfficeIcon,
           iconImageSize: [50, 50]
       })

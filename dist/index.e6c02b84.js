@@ -63,7 +63,7 @@ $7d39d93f9098a310$export$f7ad0328861e2f03 = $7d39d93f9098a310$var$resolve;
 
 var $16850d2959882b89$exports = {};
 
-(parcelRequire("aKzDW")).register(JSON.parse('{"h8h7G":"index.f383a8d5.js","8LBSM":"point.5a315395.svg"}'));
+(parcelRequire("aKzDW")).register(JSON.parse('{"h8h7G":"index.e6c02b84.js","8LBSM":"point.5a315395.svg"}'));
 
 var $7cffefe36f1103ac$exports = {};
 
@@ -92,6 +92,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
           г. Москва, Востряковский Проезд, 10Бс7
         `
             }, {
+                iconLayout: "default#image",
                 iconImageHref: $3da87ddc4a220fcd$var$mapOfficeIcon,
                 iconImageSize: [
                     50,
@@ -108,6 +109,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
           г. Тула, улица Рязанская, дом 20
         `
             }, {
+                iconLayout: "default#image",
                 iconImageHref: $3da87ddc4a220fcd$var$mapOfficeIcon,
                 iconImageSize: [
                     50,
@@ -292,4 +294,4 @@ document.addEventListener("DOMContentLoaded", ()=>{
 });
 
 
-//# sourceMappingURL=index.f383a8d5.js.map
+//# sourceMappingURL=index.e6c02b84.js.map
