@@ -12,10 +12,16 @@
   &:after {
     left: 0;
     background-image: linear-gradient(90deg, var(--gradient-blue));
+    @media (max-width: 1279px) {
+      width: 100%;
+    }
   }
   &:before {
     right: 0;
     background: url('../images/about-bg.webp') 50% 50%/cover no-repeat var(--text-gray);
+    @media (max-width: 1279px) {
+      display: none;
+    }
   }
   &__container {
     position: relative;
@@ -30,5 +36,8 @@
   }
   &__button {
     margin-top: 95px;
+    @media (max-width: 767px) {
+      margin-top: 40px;
+    }
   }
 }

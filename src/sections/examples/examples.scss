@@ -1,11 +1,20 @@
 .examples {
   padding-top: 100px;
   border-top: 1px solid var(--border-gray);
+  @media (max-width: 767px) {
+    padding-top: var(--section-offset-mobile);
+  }
   &__container {
     display: flex;
+    @media (max-width: 1279px) {
+      flex-direction: column;
+    }
   }
   &__block {
     width: 50%;
+    @media (max-width: 1279px) {
+      width: 100%;
+    }
   }
   &__info {
     padding-right: 40px;
@@ -23,6 +32,9 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: -30px;
+    @media (max-width: 1279px) {
+      margin-top: 20px;
+    }
   }
   &__item {
     width: calc(50% - 15px);

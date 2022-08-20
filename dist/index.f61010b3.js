@@ -63,7 +63,7 @@ $7d39d93f9098a310$export$f7ad0328861e2f03 = $7d39d93f9098a310$var$resolve;
 
 var $16850d2959882b89$exports = {};
 
-(parcelRequire("aKzDW")).register(JSON.parse('{"h8h7G":"index.7c96b5e0.js","8LBSM":"point.5a315395.svg"}'));
+(parcelRequire("aKzDW")).register(JSON.parse('{"h8h7G":"index.f61010b3.js","8LBSM":"point.5a315395.svg"}'));
 
 var $7cffefe36f1103ac$exports = {};
 
@@ -77,25 +77,43 @@ document.addEventListener("DOMContentLoaded", ()=>{
             // Создание карты.
             const map = new ymaps.Map("map", {
                 center: [
-                    55.642979,
-                    37.720501
+                    55.171529,
+                    39.414398
                 ],
-                zoom: 16
+                zoom: 8
             });
             officePoint = new ymaps.Placemark([
                 55.643449,
                 37.714419
-            ], {}, {
+            ], {
+                balloonContent: `
+          <b>Офис:</b>
+          <br>
+          г. Москва, Востряковский Проезд, 10Бс7
+        `
+            }, {
                 preset: "islands#icon",
                 iconColor: "#e21d24"
             });
-            map.geoObjects.add(officePoint);
+            storagePoint = new ymaps.Placemark([
+                54.155066,
+                37.595222
+            ], {
+                balloonContent: `
+          <b>Производство:</b>
+          <br>
+          г. Тула, улица Рязанская, дом 20
+        `
+            }, {
+                preset: "islands#icon",
+                iconColor: "#013c82"
+            });
+            map.geoObjects.add(officePoint).add(storagePoint);
         });
     })();
     (function sliderProducts() {
         const slider = new Swiper(".products__content-slider.swiper", {
             speed: 700,
-            simulateTouch: false,
             navigation: {
                 nextEl: ".slider-arrow-next",
                 prevEl: ".slider-arrow-prev"
@@ -114,7 +132,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
                 next: {
                     // will set `translateX(100%)` on next slides
                     translate: [
-                        "100%",
+                        0,
                         0,
                         0
                     ]
@@ -268,4 +286,4 @@ document.addEventListener("DOMContentLoaded", ()=>{
 });
 
 
-//# sourceMappingURL=index.7c96b5e0.js.map
+//# sourceMappingURL=index.f61010b3.js.map

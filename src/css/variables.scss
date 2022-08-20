@@ -21,10 +21,12 @@
   --bg-map: #010d1b;
   // Анимации
   --transition: .55s;
+  --transitionLong: .75s;
   // Тени
   --shadow-card: 0 5px 30px 0 rgb(63, 126, 202, 0.35);
   // Градиенты
   --gradient-blue: rgb(2,23,52) 0%, rgb(1,60,130) 100%;
   // Отступы
   --section-offset: 90px;
+  --section-offset-mobile: 70px;
 }

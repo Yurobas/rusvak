@@ -9,6 +9,9 @@
     width: 50vw;
     background-color: var(--bg-gray);
     z-index: 1;
+    @media (max-width: 1279px) {
+      display: none;
+    }
   }
   &__container {
     position: relative;
@@ -20,12 +23,22 @@
   &__title {
     max-width: 48%;
     margin-bottom: 0;
+    @media (max-width: 1279px) {
+      max-width: unset;
+    }
   }
   &__subtitle {
     margin-bottom: 25px;
   }
+  &__type {
+    margin-top: 5px;
+    font-weight: 600;
+  }
   &__arrows {
     display: flex;
+    @media (max-width: 767px) {
+      margin-top: 30px;
+    }
   }
   &__arrow {
     &:not(:last-of-type) {
@@ -48,15 +61,28 @@
   }
   &__slide {
     display: flex;
+    @media (max-width: 1279px) {
+      flex-direction: column;
+    }
     &-block {
       width: 50%;
+      @media (max-width: 1279px) {
+        width: 100%;
+      }
       &:first-of-type {
         padding-right: 80px;
         opacity: 0;
-        transition: var(--transition) .45s;
+        transition: var(--transitionLong);
+        @media (max-width: 1279px) {
+          padding-right: 0;
+        }
       }
       &:last-of-type {
         padding-left: 80px;
+        @media (max-width: 1279px) {
+          margin-top: 40px;
+          padding-left: 0;
+        }
       }
     }
   }
@@ -70,6 +96,10 @@
     & .swiper-slide {
       width: 100px !important;
       height: 100px !important;
+      @media (max-width: 767px) {
+        width: 80px !important;
+        height: 80px !important;
+      }
       &.--active {
         & .products__preview {
           border-color: var(--border-blue);
@@ -85,6 +115,10 @@
     border: 1px solid var(--border-gray-preview);
     transition: var(--transition);
     cursor: pointer;
+    @media (max-width: 767px) {
+      width: 80px;
+      height: 80px;
+    }
     &:hover {
       border-color: var(--border-blue);
     }

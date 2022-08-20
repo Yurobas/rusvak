@@ -12,6 +12,10 @@
     &:hover {
       border-color: var(--border-red);
     }
+    &.swiper-button-disabled {
+      opacity: .35;
+      pointer-events: none;
+    }
   }
   &-next {
     & .slider-arrow-icon {
