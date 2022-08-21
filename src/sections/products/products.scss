@@ -133,5 +133,13 @@
   }
   &__button {
     margin-top: 40px;
+    @media (max-width: 767px) {
+      padding: 0 15px 20px;
+    }
+    & .button {
+      @media (max-width: 767px) {
+        width: 100%;
+      }
+    }
   }
 }

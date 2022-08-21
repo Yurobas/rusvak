@@ -1040,6 +1040,18 @@ button {
   margin-top: 40px;
 }
 
+@media (max-width: 767px) {
+  .products__button {
+    padding: 0 15px 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .products__button .button {
+    width: 100%;
+  }
+}
+
 .examples {
   border-top: 1px solid var(--border-gray);
   padding-top: 100px;
@@ -1462,4 +1474,4 @@ button {
   transform: translate(-50%, -50%)rotate(90deg);
 }
 
-/*# sourceMappingURL=index.7d3b21bb.css.map */
+/*# sourceMappingURL=index.f75fc11d.css.map */
