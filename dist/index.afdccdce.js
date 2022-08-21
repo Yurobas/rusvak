@@ -63,7 +63,7 @@ $7d39d93f9098a310$export$f7ad0328861e2f03 = $7d39d93f9098a310$var$resolve;
 
 var $287c4fed59a5d895$exports = {};
 
-(parcelRequire("aKzDW")).register(JSON.parse('{"h8h7G":"index.b7b22e97.js","sQ3Bm":"logo.129205bf.svg"}'));
+(parcelRequire("aKzDW")).register(JSON.parse('{"h8h7G":"index.afdccdce.js","sQ3Bm":"logo.129205bf.svg"}'));
 
 var $abc8f587cb634ce5$exports = {};
 
@@ -72,15 +72,24 @@ $abc8f587cb634ce5$exports = new URL((parcelRequire("aKzDW")).resolve("sQ3Bm"), i
 
 const $3da87ddc4a220fcd$var$mapIcon = new URL($abc8f587cb634ce5$exports);
 document.addEventListener("DOMContentLoaded", ()=>{
+    let zoom = 8;
+    let center = [
+        55.171529,
+        39.414398
+    ];
+    if (window.innerWidth < 768) {
+        zoom = 7;
+        center = [
+            54.913867,
+            37.567214
+        ];
+    }
     (function map1() {
         ymaps.ready(()=>{
             // Создание карты.
             const map = new ymaps.Map("map", {
-                center: [
-                    55.171529,
-                    39.414398
-                ],
-                zoom: 8
+                center: center,
+                zoom: zoom
             });
             const officePoint = new ymaps.Placemark([
                 55.577622,
@@ -286,4 +295,4 @@ document.addEventListener("DOMContentLoaded", ()=>{
 });
 
 
-//# sourceMappingURL=index.b7b22e97.js.map
+//# sourceMappingURL=index.afdccdce.js.map

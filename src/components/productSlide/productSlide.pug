@@ -1,0 +1,28 @@
+mixin productSlide(data)
+  .products__content-slide.swiper-slide
+    ul.products__slide
+      li.products__slide-block
+        .products__slider
+          .swiper
+            .swiper-wrapper
+              each view in data.images
+                .swiper-slide
+                  .products__view
+                    img.products__view-image(src=view, alt="Фото " + data.title)
+        .products__previews
+          .swiper
+            .swiper-wrapper 
+              each view in data.images
+                .swiper-slide
+                  .products__preview
+                    img.products__preview-image(src=view, alt="Превью " + data.title)
+      li.products__slide-block
+        h3.products__subtitle.title.title--block= data.title
+          .products__type.title.title--element= data.type
+        p.products__text.text
+        ul.products__table.table.text
+          each info in data.info
+            li.table__row 
+              .table__item!= info.key
+              .table__item!= info.value
+        a.products__button.button(href='https://api.whatsapp.com/send?phone=79775782568&text=Здравствуйте!_Меня_интересует_' + data.message)= data.link

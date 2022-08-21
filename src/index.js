@@ -4,12 +4,18 @@ const mapIcon = new URL(
 );
 
 document.addEventListener("DOMContentLoaded", () => {
+  let zoom = 8;
+  let center = [55.171529, 39.414398]
+  if (window.innerWidth < 768) {
+    zoom = 7;
+    center = [54.913867, 37.567214]
+  }
   +(function map() {
     ymaps.ready(() => {
       // Создание карты.
       const map = new ymaps.Map("map", {
-        center: [55.171529, 39.414398],
-        zoom: 8,
+        center: center,
+        zoom: zoom,
       });
 
       const officePoint = new ymaps.Placemark([55.577622, 37.624193], {

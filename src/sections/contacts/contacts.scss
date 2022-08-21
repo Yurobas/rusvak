@@ -61,6 +61,9 @@
       width: 100%;
       padding: 70px 50px;
     }
+    @media (max-width: 374px) {
+      padding: 70px 35px;
+    }
   }
   &__logo {
     position: absolute;
@@ -84,6 +87,9 @@
   &__row {
     display: flex;
     align-items: center;
+    @media (max-width: 767px) {
+      align-items: flex-start;
+    }
     & + & {
       margin-top: 8px;
     }
@@ -98,11 +104,17 @@
     @media (max-width: 767px) {
       width: 35%;
     }
+    @media (max-width: 374px) {
+      width: 32%;
+    }
   }
   &__value {
     width: 73%;
     @media (max-width: 767px) {
       width: 65%;
+    }
+    @media (max-width: 374px) {
+      width: 68%;
     }
     &.text {
       margin-top: 0;

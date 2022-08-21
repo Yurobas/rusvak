@@ -10,6 +10,7 @@
     justify-content: space-between;
     @media (max-width: 1279px) {
       flex-direction: column;
+      align-items: flex-start;
       & > * {
         & + * {
           margin-top: 25px;
@@ -25,6 +26,9 @@
     border: 1px solid var(--border-gray-dark);
     transition: var(--transition);
     cursor: pointer;
+    @media (max-width: 1279px) {
+      align-self: flex-end;
+    }
     &:hover {
       border-color: var(--border-red);
     }

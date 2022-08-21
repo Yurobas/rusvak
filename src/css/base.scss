@@ -127,8 +127,14 @@ button {
   @media (max-width: 570px) {
     font-size: 40px;
   }
+  @media (max-width: 374px) {
+    font-size: 36px;
+  }
   &--block {
     font-size: 28px;
+    @media (max-width: 374px) {
+      font-size: 24px;
+    }
   }
   &--element {
     font-size: 18px;
@@ -146,6 +152,9 @@ button {
   }
   &--big {
     font-size: 20px;
+    @media (max-width: 374px) {
+      font-size: 18px;
+    }
   }
   &--mini {
     font-size: 14px;
@@ -209,10 +218,12 @@ button {
 }
 
 .button {
+  display: inline-block;
   min-width: 260px;
   padding: 23px 15px;
   color: var(--white);
   font-size: 12px;
+  text-align: center;
   text-transform: uppercase;
   border-radius: 50px;
   background-color: var(--red);

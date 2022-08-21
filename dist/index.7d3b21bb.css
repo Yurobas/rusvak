@@ -167,8 +167,20 @@ button {
   }
 }
 
+@media (max-width: 374px) {
+  .title {
+    font-size: 36px;
+  }
+}
+
 .title--block {
   font-size: 28px;
+}
+
+@media (max-width: 374px) {
+  .title--block {
+    font-size: 24px;
+  }
 }
 
 .title--element {
@@ -192,6 +204,12 @@ button {
 
 .text--big {
   font-size: 20px;
+}
+
+@media (max-width: 374px) {
+  .text--big {
+    font-size: 18px;
+  }
 }
 
 .text--mini {
@@ -275,12 +293,14 @@ button {
 .button {
   min-width: 260px;
   color: var(--white);
+  text-align: center;
   text-transform: uppercase;
   background-color: var(--red);
   transition: var(--transition);
   border-radius: 50px;
   padding: 23px 15px;
   font-size: 12px;
+  display: inline-block;
 }
 
 .button:hover {
@@ -1055,6 +1075,12 @@ button {
   padding-right: 40px;
 }
 
+@media (max-width: 1279px) {
+  .examples__info {
+    padding-right: 0;
+  }
+}
+
 .examples__title {
   margin-bottom: 25px;
 }
@@ -1122,7 +1148,6 @@ button {
 @media (max-width: 1279px) {
   .benefits__list + .benefits__list {
     margin-top: 30px;
-    padding-top: 30px;
   }
 }
 
@@ -1142,7 +1167,7 @@ button {
 
 @media (max-width: 1279px) {
   .benefits__list:last-child .benefits__item {
-    padding-top: 0;
+    padding-top: 30px;
   }
 }
 
@@ -1189,6 +1214,7 @@ button {
   .benefits__item-icon {
     margin-bottom: 30px;
     margin-right: 0;
+    padding-top: 0;
   }
 }
 
@@ -1292,6 +1318,12 @@ button {
   }
 }
 
+@media (max-width: 374px) {
+  .contacts__card {
+    padding: 70px 35px;
+  }
+}
+
 .contacts__logo {
   width: 78%;
   fill: var(--bg-gray);
@@ -1319,6 +1351,12 @@ button {
   display: flex;
 }
 
+@media (max-width: 767px) {
+  .contacts__row {
+    align-items: flex-start;
+  }
+}
+
 .contacts__row + .contacts__row {
   margin-top: 8px;
 }
@@ -1337,6 +1375,12 @@ button {
   }
 }
 
+@media (max-width: 374px) {
+  .contacts__name {
+    width: 32%;
+  }
+}
+
 .contacts__value {
   width: 73%;
 }
@@ -1344,6 +1388,12 @@ button {
 @media (max-width: 767px) {
   .contacts__value {
     width: 65%;
+  }
+}
+
+@media (max-width: 374px) {
+  .contacts__value {
+    width: 68%;
   }
 }
 
@@ -1375,6 +1425,7 @@ button {
 @media (max-width: 1279px) {
   .footer__content {
     flex-direction: column;
+    align-items: flex-start;
   }
 
   .footer__content > * + * {
@@ -1392,6 +1443,12 @@ button {
   position: relative;
 }
 
+@media (max-width: 1279px) {
+  .footer__button {
+    align-self: flex-end;
+  }
+}
+
 .footer__button:hover {
   border-color: var(--border-red);
 }
@@ -1405,4 +1462,4 @@ button {
   transform: translate(-50%, -50%)rotate(90deg);
 }
 
-/*# sourceMappingURL=index.b7374ad2.css.map */
+/*# sourceMappingURL=index.7d3b21bb.css.map */

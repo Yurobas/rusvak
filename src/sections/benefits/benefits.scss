@@ -23,7 +23,6 @@
       border-top: 1px solid var(--border-gray);
       @media (max-width: 1279px) {
         margin-top: 30px;
-        padding-top: 30px;
       }
     }
     &:first-child {
@@ -38,7 +37,7 @@
       & .benefits__item {
         padding-top: 120px;
         @media (max-width: 1279px) {
-          padding-top: 0;
+          padding-top: 30px;
         }
       }
     }
@@ -73,6 +72,7 @@
       @media (max-width: 1279px) {
         margin-right: 0;
         margin-bottom: 30px;
+        padding-top: 0;
       }
     }
     &-name {

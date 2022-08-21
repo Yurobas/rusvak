@@ -15,323 +15,222 @@ section#products.products.section.section--autoheight
       .products__content-slider.swiper 
         .swiper-wrapper
           //- Слайд
-          .products__content-slide.swiper-slide
-            ul.products__slide
-              li.products__slide-block
-                .products__slider
-                  .swiper
-                    .swiper-wrapper 
-                      .swiper-slide
-                        .products__view
-                          img.products__view-image(src="./images/product.jpg", alt="Превью товара")
-                .products__previews
-                  .swiper
-                    .swiper-wrapper 
-                      .swiper-slide
-                        .products__preview
-                          img.products__preview-image(src="./images/product.jpg", alt="Превью товара")
-              li.products__slide-block
-                h3.products__subtitle.title.title--block 
-                  | Жорик Маленький
-                  .products__type.title.title--element Настольные вакуум-упаковочные машины
-                p.products__text.text
-                ul.products__table.table.text
-                  li.table__row 
-                    .table__item Глубина камеры 
-                    .table__item 80&nbsp;мм
-                  li.table__row 
-                    .table__item Запаечная планка 
-                    .table__item 280&nbsp;мм
-                  li.table__row 
-                    .table__item Насос Busch 
-                    .table__item 4&nbsp;м<sup>3</sup>/ч
-                button.products__button.button заказать
+          +productSlide({
+            images: [
+              './images/product.jpg'
+            ],
+            title: 'Жорик Маленький',
+            type: 'Настольные вакуум-упаковочные машины',
+            info: [
+              {
+                key: 'Глубина камеры',
+                value: '80&nbsp;мм'
+              },{
+                key: 'Запаечная планка',
+                value: '280&nbsp;мм'
+              },{
+                key: 'Насос Busch',
+                value: '4&nbsp;м<sup>3</sup>/ч'
+              }
+            ],
+            link: 'заказать',
+            message: 'Жорик_Маленький'
+          })
           //- Слайд
-          .products__content-slide.swiper-slide
-            ul.products__slide
-              li.products__slide-block
-                .products__slider
-                  .swiper
-                    .swiper-wrapper 
-                      .swiper-slide
-                        .products__view
-                          img.products__view-image(src="./images/product.jpg", alt="Превью товара")
-                .products__previews
-                  .swiper
-                    .swiper-wrapper 
-                      .swiper-slide
-                        .products__preview
-                          img.products__preview-image(src="./images/product.jpg", alt="Превью товара")
-              li.products__slide-block
-                h3.products__subtitle.title.title--block 
-                  | Жорик Плюс
-                  .products__type.title.title--element Настольные вакуум-упаковочные машины
-                p.products__text.text
-                ul.products__table.table.text
-                  li.table__row 
-                    .table__item Глубина камеры 
-                    .table__item 80&nbsp;мм
-                  li.table__row 
-                    .table__item Запаечная планка 
-                    .table__item 280&nbsp;мм
-                  li.table__row 
-                    .table__item Насос Busch 
-                    .table__item 8&nbsp;м<sup>3</sup>/ч
-                button.products__button.button заказать
+          +productSlide({
+            images: [
+              './images/product.jpg'
+            ],
+            title: 'Жорик Плюс',
+            type: 'Настольные вакуум-упаковочные машины',
+            info: [
+              {
+                key: 'Глубина камеры',
+                value: '80&nbsp;мм'
+              },{
+                key: 'Запаечная планка',
+                value: '280&nbsp;мм'
+              },{
+                key: 'Насос Busch',
+                value: '8&nbsp;м<sup>3</sup>/ч'
+              }
+            ],
+            link: 'заказать',
+            message: 'Жорик_Плюс'
+          })
           //- Слайд
-          .products__content-slide.swiper-slide
-            ul.products__slide
-              li.products__slide-block
-                .products__slider
-                  .swiper
-                    .swiper-wrapper 
-                      .swiper-slide
-                        .products__view
-                          img.products__view-image(src="./images/product.jpg", alt="Превью товара")
-                .products__previews
-                  .swiper
-                    .swiper-wrapper 
-                      .swiper-slide
-                        .products__preview
-                          img.products__preview-image(src="./images/product.jpg", alt="Превью товара")
-              li.products__slide-block
-                h3.products__subtitle.title.title--block 
-                  | Жорик 30
-                  .products__type.title.title--element Настольные вакуум-упаковочные машины
-                p.products__text.text
-                ul.products__table.table.text
-                  li.table__row 
-                    .table__item Глубина камеры 
-                    .table__item 80&nbsp;мм
-                  li.table__row 
-                    .table__item Запаечная планка 
-                    .table__item 350&nbsp;мм
-                  li.table__row 
-                    .table__item Насос Busch 
-                    .table__item 8&nbsp;м<sup>3</sup>/ч
-                button.products__button.button заказать
+          +productSlide({
+            images: [
+              './images/product.jpg'
+            ],
+            title: 'Жорик 30',
+            type: 'Настольные вакуум-упаковочные машины',
+            info: [
+              {
+                key: 'Глубина камеры',
+                value: '80&nbsp;мм'
+              },{
+                key: 'Запаечная планка',
+                value: '350&nbsp;мм'
+              },{
+                key: 'Насос Busch',
+                value: '8&nbsp;м<sup>3</sup>/ч'
+              }
+            ],
+            link: 'заказать',
+            message: 'Жорик_30'
+          })
           //- Слайд
-          .products__content-slide.swiper-slide
-            ul.products__slide
-              li.products__slide-block
-                .products__slider
-                  .swiper
-                    .swiper-wrapper 
-                      .swiper-slide
-                        .products__view
-                          img.products__view-image(src="./images/product.jpg", alt="Превью товара")
-                .products__previews
-                  .swiper
-                    .swiper-wrapper 
-                      .swiper-slide
-                        .products__preview
-                          img.products__preview-image(src="./images/product.jpg", alt="Превью товара")
-              li.products__slide-block
-                h3.products__subtitle.title.title--block 
-                  | Жорик 35
-                  .products__type.title.title--element Настольные вакуум-упаковочные машины
-                p.products__text.text
-                ul.products__table.table.text
-                  li.table__row 
-                    .table__item Глубина камеры 
-                    .table__item 100&nbsp;мм
-                  li.table__row 
-                    .table__item Запаечная планка 
-                    .table__item 350&nbsp;мм
-                  li.table__row 
-                    .table__item Насос Busch 
-                    .table__item 16&nbsp;м<sup>3</sup>/ч
-                button.products__button.button заказать
+          +productSlide({
+            images: [
+              './images/product.jpg'
+            ],
+            title: 'Жорик 35',
+            type: 'Настольные вакуум-упаковочные машины',
+            info: [
+              {
+                key: 'Глубина камеры',
+                value: '100&nbsp;мм'
+              },{
+                key: 'Запаечная планка',
+                value: '350&nbsp;мм'
+              },{
+                key: 'Насос Busch',
+                value: '16&nbsp;м<sup>3</sup>/ч'
+              }
+            ],
+            link: 'заказать',
+            message: 'Жорик_35'
+          })
+          //- Слайд 
+          +productSlide({
+            images: [
+              './images/product.jpg'
+            ],
+            title: 'Жорик 42',
+            type: 'Настольные вакуум-упаковочные машины',
+            info: [
+              {
+                key: 'Глубина камеры',
+                value: '120&nbsp;мм'
+              },{
+                key: 'Запаечная планка',
+                value: '420&nbsp;мм'
+              },{
+                key: 'Насос Busch',
+                value: '16&nbsp;м<sup>3</sup>/ч'
+              }
+            ],
+            link: 'заказать',
+            message: 'Жорик_42'
+          })
           //- Слайд
-          .products__content-slide.swiper-slide 
-            ul.products__slide
-              li.products__slide-block
-                .products__slider
-                  .swiper
-                    .swiper-wrapper 
-                      .swiper-slide
-                        .products__view
-                          img.products__view-image(src="./images/product.jpg", alt="Превью товара")
-                .products__previews
-                  .swiper
-                    .swiper-wrapper 
-                      .swiper-slide
-                        .products__preview
-                          img.products__preview-image(src="./images/product.jpg", alt="Превью товара")
-              li.products__slide-block
-                h3.products__subtitle.title.title--block 
-                  | Жорик 42
-                  .products__type.title.title--element Настольные вакуум-упаковочные машины
-                p.products__text.text
-                ul.products__table.table.text
-                  li.table__row 
-                    .table__item Глубина камеры 
-                    .table__item 120&nbsp;мм
-                  li.table__row 
-                    .table__item Запаечная планка 
-                    .table__item 420&nbsp;мм
-                  li.table__row 
-                    .table__item Насос Busch 
-                    .table__item 16&nbsp;м<sup>3</sup>/ч
-                button.products__button.button заказать
+          +productSlide({
+            images: [
+              './images/product.jpg'
+            ],
+            title: 'Пони 2-40',
+            type: 'Двухкампрные вакуум-упаковочные машины',
+            info: [
+              {
+                key: 'Глубина камеры',
+                value: '240&nbsp;мм'
+              },{
+                key: 'Запаечная планка',
+                value: '2х620&nbsp;мм'
+              },{
+                key: 'Насос Busch',
+                value: '63&nbsp;м<sup>3</sup>/ч'
+              }
+            ],
+            link: 'заказать',
+            message: 'Пони_2-40'
+          })
           //- Слайд
-          .products__content-slide.swiper-slide
-            ul.products__slide
-              li.products__slide-block
-                .products__slider
-                  .swiper
-                    .swiper-wrapper 
-                      .swiper-slide
-                        .products__view
-                          img.products__view-image(src="./images/product.jpg", alt="Превью товара")
-                .products__previews
-                  .swiper
-                    .swiper-wrapper 
-                      .swiper-slide
-                        .products__preview
-                          img.products__preview-image(src="./images/product.jpg", alt="Превью товара")
-              li.products__slide-block
-                h3.products__subtitle.title.title--block 
-                  | Пони 2-40
-                  .products__type.title.title--element Двухкампрные вакуум-упаковочные машины
-                p.products__text.text
-                ul.products__table.table.text
-                  li.table__row 
-                    .table__item Высота крышки
-                    .table__item 240&nbsp;мм
-                  li.table__row 
-                    .table__item Запаечная планка 
-                    .table__item 2х620&nbsp;мм
-                  li.table__row 
-                    .table__item Насос Busch 
-                    .table__item 63&nbsp;м<sup>3</sup>/ч
-                button.products__button.button заказать
+          +productSlide({
+            images: [
+              './images/product.jpg'
+            ],
+            title: 'Пони 2-50',
+            type: 'Двухкампрные вакуум-упаковочные машины',
+            info: [
+              {
+                key: 'Глубина камеры',
+                value: '240&nbsp;мм'
+              },{
+                key: 'Запаечная планка',
+                value: '2х620&nbsp;мм'
+              },{
+                key: 'Насос Busch',
+                value: '100&nbsp;м<sup>3</sup>/ч'
+              }
+            ],
+            link: 'заказать',
+            message: 'Пони_2-50'
+          })
           //- Слайд
-          .products__content-slide.swiper-slide
-            ul.products__slide
-              li.products__slide-block
-                .products__slider
-                  .swiper
-                    .swiper-wrapper 
-                      .swiper-slide
-                        .products__view
-                          img.products__view-image(src="./images/product.jpg", alt="Превью товара")
-                .products__previews
-                  .swiper
-                    .swiper-wrapper 
-                      .swiper-slide
-                        .products__preview
-                          img.products__preview-image(src="./images/product.jpg", alt="Превью товара")
-              li.products__slide-block
-                h3.products__subtitle.title.title--block 
-                  | Пони 2-50
-                  .products__type.title.title--element Двухкампрные вакуум-упаковочные машины
-                p.products__text.text
-                ul.products__table.table.text
-                  li.table__row 
-                    .table__item Высота крышки
-                    .table__item 240&nbsp;мм
-                  li.table__row 
-                    .table__item Запаечная планка 
-                    .table__item 2х620&nbsp;мм
-                  li.table__row 
-                    .table__item Насос Busch 
-                    .table__item 100&nbsp;м<sup>3</sup>/ч
-                button.products__button.button заказать
+          +productSlide({
+            images: [
+              './images/product.jpg'
+            ],
+            title: 'Пони 2-75',
+            type: 'Двухкампрные вакуум-упаковочные машины',
+            info: [
+              {
+                key: 'Глубина камеры',
+                value: '250&nbsp;мм'
+              },{
+                key: 'Запаечная планка',
+                value: '2х620&nbsp;мм'
+              },{
+                key: 'Насос Busch',
+                value: '160&nbsp;м<sup>3</sup>/ч'
+              }
+            ],
+            link: 'заказать',
+            message: 'Пони_2-75'
+          })
           //- Слайд
-          .products__content-slide.swiper-slide
-            ul.products__slide
-              li.products__slide-block
-                .products__slider
-                  .swiper
-                    .swiper-wrapper 
-                      .swiper-slide
-                        .products__view
-                          img.products__view-image(src="./images/product.jpg", alt="Превью товара")
-                .products__previews
-                  .swiper
-                    .swiper-wrapper 
-                      .swiper-slide
-                        .products__preview
-                          img.products__preview-image(src="./images/product.jpg", alt="Превью товара")
-              li.products__slide-block
-                h3.products__subtitle.title.title--block 
-                  | Пони 2-75
-                  .products__type.title.title--element Двухкампрные вакуум-упаковочные машины
-                p.products__text.text
-                ul.products__table.table.text
-                  li.table__row 
-                    .table__item Высота крышки
-                    .table__item 250&nbsp;мм
-                  li.table__row 
-                    .table__item Запаечная планка 
-                    .table__item 2х620&nbsp;мм
-                  li.table__row 
-                    .table__item Насос Busch 
-                    .table__item 160&nbsp;м<sup>3</sup>/ч
-                button.products__button.button заказать
+          +productSlide({
+            images: [
+              './images/product.jpg'
+            ],
+            title: 'Пони 2-90',
+            type: 'Двухкампрные вакуум-упаковочные машины',
+            info: [
+              {
+                key: 'Глубина камеры',
+                value: '260&nbsp;мм'
+              },{
+                key: 'Запаечная планка',
+                value: '2х900&nbsp;мм'
+              },{
+                key: 'Насос Busch',
+                value: '300&nbsp;м<sup>3</sup>/ч'
+              }
+            ],
+            link: 'заказать',
+            message: 'Пони_2-90'
+          })
           //- Слайд
-          .products__content-slide.swiper-slide
-            ul.products__slide
-              li.products__slide-block
-                .products__slider
-                  .swiper
-                    .swiper-wrapper 
-                      .swiper-slide
-                        .products__view
-                          img.products__view-image(src="./images/product.jpg", alt="Превью товара")
-                .products__previews
-                  .swiper
-                    .swiper-wrapper 
-                      .swiper-slide
-                        .products__preview
-                          img.products__preview-image(src="./images/product.jpg", alt="Превью товара")
-              li.products__slide-block
-                h3.products__subtitle.title.title--block 
-                  | Пони 2-90
-                  .products__type.title.title--element Двухкампрные вакуум-упаковочные машины
-                p.products__text.text
-                ul.products__table.table.text
-                  li.table__row 
-                    .table__item Высота крышки
-                    .table__item 260&nbsp;мм
-                  li.table__row 
-                    .table__item Запаечная планка 
-                    .table__item 2х900&nbsp;мм
-                  li.table__row 
-                    .table__item Насос Busch 
-                    .table__item 300&nbsp;м<sup>3</sup>/ч
-                button.products__button.button заказать
-          //- Слайд
-          .products__content-slide.swiper-slide
-            ul.products__slide
-              li.products__slide-block
-                .products__slider
-                  .swiper
-                    .swiper-wrapper 
-                      .swiper-slide
-                        .products__view
-                          img.products__view-image(src="./images/product.jpg", alt="Превью товара")
-                .products__previews
-                  .swiper
-                    .swiper-wrapper 
-                      .swiper-slide
-                        .products__preview
-                          img.products__preview-image(src="./images/product.jpg", alt="Превью товара")
-              li.products__slide-block
-                h3.products__subtitle.title.title--block 
-                  | Жорик 42
-                  .products__type.title.title--element Двухкампрные вакуум-упаковочные машины
-                p.products__text.text
-                ul.products__table.table.text
-                  li.table__row 
-                    .table__item Высота крышки
-                    .table__item 280&nbsp;мм
-                  li.table__row 
-                    .table__item Запаечная планка 
-                    .table__item 2х1100&nbsp;мм
-                  li.table__row 
-                    .table__item Насос Busch 
-                    .table__item 300&nbsp;м<sup>3</sup>/ч
-                button.products__button.button заказать
-
+          +productSlide({
+            images: [
+              './images/product.jpg'
+            ],
+            title: 'Жорик 42',
+            type: 'Двухкампрные вакуум-упаковочные машины',
+            info: [
+              {
+                key: 'Глубина камеры',
+                value: '280&nbsp;мм'
+              },{
+                key: 'Запаечная планка',
+                value: '2х1100&nbsp;мм'
+              },{
+                key: 'Насос Busch',
+                value: '300&nbsp;м<sup>3</sup>/ч'
+              }
+            ],
+            link: 'заказать',
+            message: 'Жорик_42'
+          })
