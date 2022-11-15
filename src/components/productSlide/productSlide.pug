@@ -26,4 +26,4 @@ mixin productSlide(data)
               .table__item!= info.key
               .table__item!= info.value
         .products__button
-          a.button(href='https://api.whatsapp.com/send?phone=79775782568&text=Здравствуйте! Меня интересует машина "' + data.message + '"')= data.link
+          a.button(target="_blank" href='https://api.whatsapp.com/send?phone=79775782568&text=Здравствуйте! Меня интересует машина "' + data.message + '"')= data.link

@@ -63,7 +63,7 @@ $7d39d93f9098a310$export$f7ad0328861e2f03 = $7d39d93f9098a310$var$resolve;
 
 var $287c4fed59a5d895$exports = {};
 
-(parcelRequire("aKzDW")).register(JSON.parse('{"h8h7G":"index.afdccdce.js","sQ3Bm":"logo.129205bf.svg"}'));
+(parcelRequire("aKzDW")).register(JSON.parse('{"h8h7G":"index.9c393b9c.js","sQ3Bm":"logo.129205bf.svg"}'));
 
 var $abc8f587cb634ce5$exports = {};
 
@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
         });
     })();
     (function sliderProducts() {
-        const slider = new Swiper(".products__content-slider.swiper", {
+        let options = {
             speed: 700,
             navigation: {
                 nextEl: ".slider-arrow-next",
@@ -147,7 +147,14 @@ document.addEventListener("DOMContentLoaded", ()=>{
                     ]
                 }
             }
-        });
+        };
+        // if (window.innerWidth >= 1280) {
+        //   options = {
+        //     ...options,
+        //     simulateTouch: false
+        //   }
+        // }
+        const slider = new Swiper(".products__content-slider.swiper", options);
     })();
     (function slidersProduct() {
         const activeClass = "--active";
@@ -155,47 +162,47 @@ document.addEventListener("DOMContentLoaded", ()=>{
             ...document.querySelectorAll(".products__slide")
         ];
         items.forEach((item)=>{
-            const previews = [
-                ...item.querySelectorAll(".products__previews .swiper-slide"), 
-            ];
-            const previewSliderEl = item.querySelector(".products__previews .swiper");
+            // const previews = [...item.querySelectorAll(".products__previews .swiper-slide")];
+            // const previewSliderEl = item.querySelector('.products__previews .swiper');
             const mainSliderEl = item.querySelector(".products__slider .swiper");
-            const previewSlider = new Swiper(previewSliderEl, {
-                speed: 700,
-                spaceBetween: 30,
-                slidesPerView: "auto",
-                watchSlidesProgress: true,
-                watchSlidesVisibility: true
-            });
+            // const previewSlider = new Swiper(previewSliderEl, {
+            //   speed: 700,
+            //   spaceBetween: 30,
+            //   slidesPerView: "auto",
+            //   watchSlidesProgress: true,
+            //   watchSlidesVisibility: true,
+            // });
             const mainSlider = new Swiper(mainSliderEl, {
                 speed: 700,
                 spaceBetween: 30
             });
-            addActive(0);
-            mainSlider.on("slideChange", ()=>{
-                let index = mainSlider.activeIndex;
-                if (!index && index !== 0) return;
-                removeActive();
-                addActive(index);
-                previewSlider.slideTo(index);
-            });
-            previewSlider.on("click", ()=>{
-                let index = previewSlider.clickedIndex;
-                if (!index && index !== 0) return;
-                removeActive();
-                addActive(index);
-                mainSlider.slideTo(index);
-            });
-            function addActive(index) {
-                previews.forEach((preview, i)=>{
-                    if (index === i) preview.classList.add(activeClass);
-                });
-            }
-            function removeActive() {
-                previews.forEach((preview)=>{
-                    preview.classList.remove(activeClass);
-                });
-            }
+        // addActive(0);
+        // mainSlider.on("slideChange", () => {
+        //   let index = mainSlider.activeIndex;
+        //   if (!index && index !== 0) return;
+        //   removeActive();
+        //   addActive(index);
+        //   previewSlider.slideTo(index);
+        // });
+        // previewSlider.on("click", () => {
+        //   let index = previewSlider.clickedIndex;
+        //   if (!index && index !== 0) return;
+        //   removeActive();
+        //   addActive(index);
+        //   mainSlider.slideTo(index);
+        // });
+        // function addActive(index) {
+        //   previews.forEach((preview, i) => {
+        //     if (index === i) {
+        //       preview.classList.add(activeClass);
+        //     }
+        //   });
+        // }
+        // function removeActive() {
+        //   previews.forEach((preview) => {
+        //     preview.classList.remove(activeClass);
+        //   });
+        // }
         });
     })();
     (function anchorScroll() {
@@ -295,4 +302,4 @@ document.addEventListener("DOMContentLoaded", ()=>{
 });
 
 
-//# sourceMappingURL=index.afdccdce.js.map
+//# sourceMappingURL=index.9c393b9c.js.map

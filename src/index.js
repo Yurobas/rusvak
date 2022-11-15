@@ -53,7 +53,8 @@ document.addEventListener("DOMContentLoaded", () => {
   })();
 
   +(function sliderProducts() {
-    const slider = new Swiper('.products__content-slider.swiper', {
+
+    let options = {
       speed: 700,
       navigation: {
         nextEl: '.slider-arrow-next',
@@ -71,16 +72,23 @@ document.addEventListener("DOMContentLoaded", () => {
           translate: [0, 0, 0]
         },
       },
-    })
+    }
+
+    if (window.innerWidth >= 1280) {
+      options = {
+        ...options,
+        simulateTouch: false
+      }
+    }
+
+    const slider = new Swiper('.products__content-slider.swiper', options)
   })();
 
   +(function slidersProduct() {
     const activeClass = "--active";
     const items = [...document.querySelectorAll('.products__slide')];
     items.forEach(item => {
-      const previews = [
-        ...item.querySelectorAll(".products__previews .swiper-slide"),
-      ];
+      const previews = [...item.querySelectorAll(".products__previews .swiper-slide")];
       const previewSliderEl = item.querySelector('.products__previews .swiper');
       const mainSliderEl = item.querySelector('.products__slider .swiper');
 
